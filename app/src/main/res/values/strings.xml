@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RecycleViewTest</string>
+    <string name="send_email">Send Email</string>
+    <string name="send_mail_error">There are no email clients installed.</string>
 </resources>

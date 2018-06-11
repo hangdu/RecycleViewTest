@@ -1,42 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="5dp"
+<LinearLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/contributor_profile_image"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        app:civ_border_width="1dp"
-        tools:src="@drawable/donald_profile" />
-
-    <TextView
-        android:id="@+id/contributor_name"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="5dp"
-        android:layout_toEndOf="@id/contributor_profile_image"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        tools:text="Donald Shtjefni" />
+        android:padding="5dp">
 
-    <TextView
-        android:id="@+id/contributor_description"
-        android:layout_width="wrap_content"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/contributor_profile_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            app:civ_border_width="1dp"
+            tools:src="@drawable/donald_profile" />
+
+        <TextView
+            android:id="@+id/contributor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/contributor_profile_image"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Donald Shtjefni" />
+
+        <TextView
+            android:id="@+id/contributor_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contributor_name"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/contributor_profile_image"
+            android:textSize="14sp"
+            tools:text="I am 19 years old. I am a young software developer, I like CS in general, and more specifically, I love learning and doing stuff with Linux and Android. I also like TV Series." />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/contributor_contacts"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/contributor_name"
-        android:layout_marginStart="5dp"
-        android:layout_toEndOf="@id/contributor_profile_image"
-        android:textSize="14sp"
-        tools:text="I am 19 years old. I am a young software developer, I like CS in general, and more specifically, I love learning and doing stuff with Linux and Android. I also like TV Series." />
-
-</RelativeLayout>
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp">
+    </LinearLayout>
+</LinearLayout>
